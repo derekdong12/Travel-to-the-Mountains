@@ -1,0 +1,402 @@
+@media screen and (min-width: 850px) {
+.heading-primary-main {
+    color: #32CD32;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3.5rem;
+    margin-bottom: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    max-width: 100%;
+}
+
+.paragraph-primary-main {
+	color: #FF00FF;
+	font-size: 4rem;
+	font-weight: 100;
+	font-family: 'Gloria Hallelujah', cursive;
+	letter-spacing: 2rem;
+	margin-bottom: 3rem;
+	position: absolute;
+    right: 25%;
+    margin-left: 5rem;
+}
+
+.paragraph {
+    color: #F0FFFF;
+	font-size: 1.8rem;
+	font-weight: 100;
+	font-family: 'Laila', serif;
+	margin-bottom: 3rem;
+	position: absolute;
+    top: 40%;
+    left: 15%;
+    right: 70%;
+}
+
+.composition {
+	position: relative;
+}
+
+.composition_photo {
+	width: 17%;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.4);
+	position: absolute;
+	outline-offset: 2rem;
+}
+
+.composition_--p1 {
+	top: 30rem;
+	left: 85rem;
+}
+
+.composition_--p2 {
+	top: 42rem;
+	left: 68rem;
+}
+
+.composition_--p3 {
+    top: 42rem;
+    left: 105rem;
+}
+
+.composition_photo:hover {
+	transform: scale(1.5) translate(-.5rem);
+	z-index: 10;
+	box-shadow: 0 2.5rem 4rem rgba(0,0,0,.6);
+	outline: 1.5rem solid #00FFFF;
+}
+
+.card_--p1 {
+	position: relative;
+	perspective: 150rem;
+	left: 10rem;
+	top: 13rem;
+}
+
+.card_--p2 {
+	position: relative;
+	perspective: 150rem;
+	left: 57.5rem;
+	top: 13rem;
+}
+
+.card_--p3 {
+	position: relative;
+	perspective: 150rem;
+	left: 105rem;
+	top: 13rem;
+}
+
+.icon-1 {
+	border-radius: 50%;
+    height: 10rem; 
+    width: 10rem;
+    margin: 10rem;
+}
+
+.paragraph-review-1 {
+	font-size: 3.5rem;
+	margin-right: 20rem;
+	margin-top: 12.5rem;
+	color: #f44141;
+}
+
+.icon-2 {
+	border-radius: 50%;
+	height: 10rem;
+	width: 10rem;
+	margin-top: 60rem;
+	margin-right: -110rem;
+}
+
+.paragraph-review-2 {
+	font-size: 3.5rem;
+	margin-right: 50rem;
+	margin-top: 60rem;
+	color: #61f441;
+}
+}
+
+@-ms-viewport{
+	width: device-width;
+  }
+  
+@media screen and (min-width: 850px) {
+	  html {
+		  font-size: 50%;
+	  }
+
+.row {
+	  position: relative;
+	  height: 100vh;
+	  background-image: linear-gradient(
+		  to right bottom,
+		  rgba(11, 136, 212, 0.4) ,
+		  rgba(11, 113, 175, 0.4)) ,
+	  url(Img/Mountain7.jpg);
+	  background-size: cover;
+	  background-position: top;
+	  overflow: hidden;
+	  width: 200rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+	html {
+		font-size: 45%;
+	}
+	*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.heading-primary-main {
+    color: #32CD32;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3.5rem;
+    margin-bottom: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    max-width: 100%;
+}
+
+.composition {
+	position: relative;
+}
+
+.composition_photo {
+	width: 17%;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.4);
+	position: absolute;
+	outline-offset: 2rem;
+	max-width: 100%;
+}
+
+.composition_--p1 {
+	top: 30rem;
+	left: 110rem;
+}
+
+.composition_--p2 {
+	top: 42rem;
+	left: 88rem;
+}
+
+.composition_--p3 {
+    top: 42rem;
+    left: 130rem;
+}
+
+.composition_photo:hover {
+	transform: scale(1.5) translate(-.5rem);
+	z-index: 10;
+	box-shadow: 0 2.5rem 4rem rgba(0,0,0,.6);
+	outline: 1.5rem solid #00FFFF;
+}
+
+.child {
+  width: 4
+  0%;
+  height: 40%;
+}
+
+.card_--p1 {
+	position: relative;
+	perspective: 150rem;
+	left: 20rem;
+	top: 20rem;
+}
+
+.card_--p2 {
+	position: relative;
+	perspective: 150rem;
+	left: 80rem;
+	top: 20rem;
+}
+
+.card_--p3 {
+	position: relative;
+	perspective: 150rem;
+	left: 140rem;
+	top: 20rem;
+}
+
+.card-side {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 33rem;
+	height: 60rem;
+	backface-visibility: hidden;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.9);
+}
+
+.card-side-front_--p1 {
+    background-image: 
+    url(Img/Mountain8.jpg);
+    background-position: bottom;
+	z-index: 1;
+	transition: .7s;
+	font-size: 5rem;
+	color: purple;
+	text-shadow: .4rem .4rem .6rem white;
+}
+
+.card-side-back_--p1 {
+    background-image: 
+    url(Img/Mountain9.jpg);
+    background-position: bottom;
+	z-index: 0;
+	transition: .7s;
+	font-size: 4rem;
+	color: black;
+	text-shadow: .4rem .4rem .6rem brown;
+}
+
+.card:hover .card-side-front_--p1 {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back_--p1 {
+	transform: rotateY(0deg);
+}
+
+.card-side-front_--p2 {
+    background-image: 
+    url(Img/Mountain12.jpg);
+    background-position: right;
+	z-index: 1;
+	transition: .7s;
+	font-size: 5rem;
+	color: gold;
+	text-shadow: .4rem .4rem .6rem green;
+}
+
+.card-side-back_--p2 {
+    background-image: 
+    url(Img/Mountain14.jpg);
+    background-position: bottom;
+	z-index: 0;
+	transition: .7s;
+	font-size: 4rem;
+	color: green;
+	text-shadow: .4rem .4rem .6rem orange;
+}
+
+.card:hover .card-side-front_--p2 {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back_--p2 {
+	transform: rotateY(0deg);
+}
+
+.card-side-front_--p3 {
+    background-image: 
+    url(Img/Mountain12.jpg);
+    background-position: bottom;
+	z-index: 1;
+	transition: .7s;
+	font-size: 5rem;
+	color: blue;
+	text-shadow: .4rem .4rem .6rem red;
+}
+
+.card-side-back_--p3 {
+    background-image: 
+    url(Img/Mountain15.jpg);
+    background-position: bottom;
+	z-index: 0;
+	transition: .7s;
+	font-size: 3.5rem;
+	color: red;
+	text-shadow: .4rem .4rem .6rem black;
+}
+
+.card:hover .card-side-front_--p3 {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back_--p3 {
+	transform: rotateY(0deg);
+}
+
+.button {
+  position: relative;
+  padding: 1rem 1.5rem;
+  margin-left: 10rem;
+  margin-top: 20rem;
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #00BFFF;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem #999;
+}
+
+.children {
+    position: relative;
+    height: 100vh;
+	background-position: top;
+	display: flex;
+    flex-flow: row nowrap;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(11, 136, 212, 0.4) ,
+		rgba(11, 113, 175, 0.4)) ,
+	url(Img/Mountain21.jpg);
+	width: 200rem;
+}
+
+.icon-1 {
+	border-radius: 50%;
+    height: 10rem; 
+    width: 10rem;
+    margin: 10rem;
+    max-width: 100%;
+}
+
+.paragraph-review-1 {
+	font-size: 3.5rem;
+	margin-right: 10rem;
+	margin-top: 12.5rem;
+	color: #f44141;
+}
+
+.icon-2 {
+	border-radius: 50%;
+	height: 10rem;
+	width: 10rem;
+	margin-top: 60rem;
+	margin-right: -110rem;
+	max-width: 100%;
+}
+
+.paragraph-review-2 {
+	font-size: 3.5rem;
+	margin-right: 50rem;
+	margin-top: 60rem;
+	color: #61f441;
+}
+
+}

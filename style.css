@@ -1,0 +1,556 @@
+:root {
+	--color-primary: #7FFFD4;
+	--color-primary-light: #6CE6EE;
+	--color-rimary-dark: #6CE6EE;
+    --color-secondary: #144AE5;
+    --color-tertiary: #F519D0;
+    --color: #55E2E8;
+    --default-font-size: 1.6rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-primary);
+	margin: 0;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 2000;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.Popup {
+	margin: 7rem auto;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 1rem;
+    width: 30%;
+    position: relative;
+}
+
+.Popup h2 {
+	margin-top: 0;
+	color: #333;
+    font-size: 2rem;
+}
+
+.Popup .close {
+	position: absolute;
+	top: 1.3rem;
+	right: 3rem;
+	font-size: 3rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.header {
+	position: relative;
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-position: top;
+	width: 100%;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: .5rem 10rem;
+	border: .1rem solid blue;
+}
+
+.logo-box {
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+}
+
+.heading-primary-main {
+   color: #32CD32;
+   text-transform: uppercase;
+   font-size: 6rem;
+   font-weight: 400;
+   font-family: 'Lobster', cursive;
+   letter-spacing: 3.5rem;
+   margin-bottom: 6rem;
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation-name: moveInLeft;
+   animation-duration: 5s;
+}
+
+.heading-primary-sub {
+	display: block;
+}
+
+.navigation_checkbox {
+	display: none;
+}
+
+.navigation_button {
+	background-color: white;
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6rem;
+	right: 6rem;
+	z-index: 2000;
+	box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+	text-align: center;
+	cursor: pointer;
+}
+
+.navigation_icon {
+	position: relative;
+	margin-top: 3.5rem;
+}
+
+.navigation_icon::before, .navigation_icon::after {
+	content: "";
+}
+
+.navigation_icon::before {
+	position: absolute;
+	top: -.8rem;
+	left: 0;
+}
+
+.navigation_icon::after {
+	position: absolute;
+	top: .8rem;
+	left: 0;
+}
+
+.navigation_icon, .navigation_icon::before, .navigation_icon:after {
+	width: 3rem;
+	height: 2px;
+	background-color: #333;
+	display: inline-block;
+	transition: all .2s;
+}
+
+.navigation_button:hover .navigation_icon::before {
+	top: -1rem;
+}
+
+.navigation_button:hover .navigation_icon::after {
+	top: 1rem;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon {
+	background-color: transparent;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::before { 
+	transform: rotate(135deg);
+	top: 0;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+}
+
+.navigation_list {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	text-align: center;
+	width: 100%;
+}
+
+.navigation_item {
+	margin: 1rem;
+}
+
+.navigation_nav {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0.5;
+	opacity: 0;
+	width: 100%;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navigation_background {
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6.5rem;
+	right: 6.5rem;
+	background-image: radial-gradient(
+		rgba(41, 152, 255, 1),
+		rgba(40, 180, 133, 1));
+	z-index: 2;
+	transition: transform .8s;
+}
+
+.navigation_link, .navigation:link, .navigation_link:visited {
+	display: inline-block;
+	font-size: 3rem;
+	font-weight: 300;
+	padding: 1rem 2rem;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+	background-size: 240%;
+	transition: all .4s;
+}
+.navigation_link:hover, .navigation_link:active {
+	background-position: 100%;
+	color: rgba(41, 152, 255, 1);
+	transform: translateX(1rem);
+}
+
+.navigation_checkbox:checked~.navigation_background {
+	transform: scale(80);
+	z-index: 1000;
+}
+
+.navigation_checkbox:checked~.navigation_nav {
+	opacity: 1;
+	width: 100%;
+	z-index: 1500;
+}
+
+.row {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+		to right bottom,
+		rgba(11, 136, 212, 0.4) ,
+		rgba(11, 113, 175, 0.4)) ,
+	url(Img/Mountain7.jpg);
+	background-size: cover;
+	background-position: top;
+	overflow: hidden;
+	width: 200rem;
+}
+
+.paragraph-primary-main {
+	color: #FF00FF;
+	font-size: 4rem;
+	font-weight: 100;
+	font-family: 'Gloria Hallelujah', cursive;
+	letter-spacing: 2rem;
+	margin-bottom: 3rem;
+	position: absolute;
+    left: 8%;
+}
+
+.paragraph {
+    color: #F0FFFF;
+	font-size: 1.8rem;
+	font-weight: 100;
+	font-family: 'Laila', serif;
+	margin-bottom: 3rem;
+	position: absolute;
+    top: 40%;
+    left: 15%;
+    right: 70%;
+}
+
+.composition {
+	position: relative;
+}
+
+.composition_photo {
+	width: 17%;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.4);
+	position: absolute;
+	outline-offset: 2rem;
+}
+
+.composition_--p1 {
+	top: 33rem;
+	left: 110rem;
+}
+
+.composition_--p2 {
+	top: 42rem;
+	left: 88rem;
+}
+
+.composition_--p3 {
+    top: 42rem;
+    left: 130rem;
+}
+
+.composition_photo:hover {
+	transform: scale(1.5) translate(-.5rem);
+	z-index: 10;
+	box-shadow: 0 2.5rem 4rem rgba(0,0,0,.6);
+	outline: 1.5rem solid #00FFFF;
+}
+
+.parent {
+    position: relative;
+    height: 100vh;
+	background-position: top;
+	display: flex;
+    flex-flow: row nowrap;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(11, 136, 212, 0.4) ,
+		rgba(11, 113, 175, 0.4)) ,
+	url(Img/Mountain18.jpg);
+	width: 200rem;
+}
+
+.parent-paragraph {
+	position: relative;
+	font-size: 2rem;
+	color: black;
+	padding: 3rem;
+}
+
+.child {
+  width: 40%;
+  height: 40%;
+}
+
+.card_--p1 {
+	position: relative;
+	perspective: 150rem;
+	left: 20rem;
+	top: 20rem;
+}
+
+.card_--p2 {
+	position: relative;
+	perspective: 150rem;
+	left: 80rem;
+	top: 20rem;
+}
+
+.card_--p3 {
+	position: relative;
+	perspective: 150rem;
+	left: 140rem;
+	top: 20rem;
+}
+
+.card-side {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 33rem;
+	height: 60rem;
+	backface-visibility: hidden;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.9);
+}
+
+.card-side-front_--p1 {
+    background-image: 
+    url(Img/Mountain8.jpg);
+    background-position: bottom;
+	z-index: 1;
+	transition: .7s;
+	font-size: 5rem;
+	color: purple;
+	text-shadow: .4rem .4rem .6rem white;
+}
+
+.card-side-back_--p1 {
+    background-image: 
+    url(Img/Mountain9.jpg);
+    background-position: bottom;
+	z-index: 0;
+	transition: .7s;
+	font-size: 4rem;
+	color: black;
+	text-shadow: .4rem .4rem .6rem brown;
+}
+
+.card:hover .card-side-front_--p1 {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back_--p1 {
+	transform: rotateY(0deg);
+}
+
+.card-side-front_--p2 {
+    background-image: 
+    url(Img/Mountain12.jpg);
+    background-position: right;
+	z-index: 1;
+	transition: .7s;
+	font-size: 5rem;
+	color: gold;
+	text-shadow: .4rem .4rem .6rem green;
+}
+
+.card-side-back_--p2 {
+    background-image: 
+    url(Img/Mountain14.jpg);
+    background-position: bottom;
+	z-index: 0;
+	transition: .7s;
+	font-size: 4rem;
+	color: green;
+	text-shadow: .4rem .4rem .6rem orange;
+}
+
+.card:hover .card-side-front_--p2 {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back_--p2 {
+	transform: rotateY(0deg);
+}
+
+.card-side-front_--p3 {
+    background-image: 
+    url(Img/Mountain12.jpg);
+    background-position: bottom;
+	z-index: 1;
+	transition: .7s;
+	font-size: 5rem;
+	color: blue;
+	text-shadow: .4rem .4rem .6rem red;
+}
+
+.card-side-back_--p3 {
+    background-image: 
+    url(Img/Mountain15.jpg);
+    background-position: bottom;
+	z-index: 0;
+	transition: .7s;
+	font-size: 3.5rem;
+	color: red;
+	text-shadow: .4rem .4rem .6rem black;
+}
+
+.card:hover .card-side-front_--p3 {
+	transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back_--p3 {
+	transform: rotateY(0deg);
+}
+
+.button {
+  position: relative;
+  padding: 1rem 1.5rem;
+  margin-left: 10rem;
+  margin-top: 20rem;
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #00BFFF;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 .5rem #666;
+  transform: translateY(.4rem);
+}
+
+.children {
+    position: relative;
+    height: 100vh;
+	background-position: top;
+	display: flex;
+    flex-flow: row nowrap;
+	background-size: cover;
+	background-position: top;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(11, 136, 212, 0.4) ,
+		rgba(11, 113, 175, 0.4)) ,
+	url(Img/Mountain21.jpg);
+	width: 200rem;
+}
+
+.icon-1 {
+	border-radius: 50%;
+    height: 10rem; 
+    width: 10rem;
+    margin: 10rem;
+}
+
+.paragraph-review-1 {
+	font-size: 3.5rem;
+	margin-right: 10rem;
+	margin-top: 12.5rem;
+	color: #f44141;
+}
+
+.icon-2 {
+	border-radius: 50%;
+	height: 10rem;
+	width: 10rem;
+	margin-top: 60rem;
+	margin-right: -110rem;
+}
+
+.paragraph-review-2 {
+	font-size: 3.5rem;
+	margin-right: 50rem;
+	margin-top: 60rem;
+	color: #61f441;
+}
+
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translate(-50rem);
+	}
+	25% {
+		opacity: .25;
+	}
+	50% {
+		opacity: .5;
+	}
+	75% {
+		opacity: .75;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(5);
+	}
+}
+body{
+	overflow-x: hidden;
+}

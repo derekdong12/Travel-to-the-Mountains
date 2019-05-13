@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<link rel="stylesheet" type="text/css" href="mediaqueries.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Laila|Lobster" rel="stylesheet">
+	<title>Travel Site</title>
+</head>
+<body>
+	<div id="Popup_1" class="overlay">
+		<div class="Popup">
+			<h2>Do you want to go to <a href="https://www.trivago.com/">Trivago</a>?</h2>
+			<a class="close" href="#">&times;</a>
+		</div>
+	</div>
+	    <div class="navigation">
+		    <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
+		        <label for="navi-toggle" class="navigation_button">
+		        	<span class="navigation_icon"></span>
+		        </label>
+		<div class="navigation_background">&nbsp;</div>
+		    <nav class="navigation_nav">
+		        <ul class="navigation_list">
+		        	<li class="navigation_item"><a href="#" class="navigation_link">Welcome</a>></li>
+		        	<li class="navigation_item"><a href="#section-description" class="navigation_link">Descriptions</a></li>
+		        	<li class="navigation_item"><a href="#section-discover" class="navigation_link">Book Now</a></li>
+		        	<li class="navigation_item"><a href="#section-credit" class="navigation_link">Critics</a></li>
+		        </ul>
+		    </nav>
+		</div>   
+    <main>
+        <section class="section-about">
+	        <header class="header">
+		        <div class="logo-box"><img src="Img/globe-grid.png" alt="logo" class="logo"></div>
+		        <div class="text-box">
+			       <h1 class="heading-primary-main">Discover Mountains Here</h1>
+		        </div>
+		        <video autoplay muted loop id="myVideo" class="video">
+                    <source src="Img/Mountain View.mp4" type="video/mp4">
+                </video>
+	        </header>
+		</section>
+		
+		<section class="section-description" id="section-description">
+		    <div class="row">
+		    	<div class="col-1-of-2">
+		    	<h3 class="paragraph-primary-main">Fall in love with mother nature and conquer the limitless mountains</h3>
+		    	<p class="paragraph">If the earth had a pulse it rose through the mountains, creating their bold silhouette. To my eye, their peaks are the green line of a doctor's graph. I saw those rocks at dawn, those slopes that give home to so much life, a foundation for trees and shrubs, grass and ferns. With blue above and below, in the sky and lake, ever lightening as the sun rose, I knew it would be a good day... I just knew.</p>
+		        </div>
+		        <div class="col-1-of-2">
+		    	    <div class="composition">
+		    		    <img src="Img/Mountain2.jpg" alt="photos1" class="composition_photo composition_--p1">
+		    		    <img src="Img/Mountain5.jpg" alt="photos2" class="composition_photo composition_--p2">
+		    		    <img src="Img/Mountain4.jpg" alt="photos3" class="composition_photo composition_--p3">
+		    	    </div>
+		        </div>	
+		    </div>
+		</section>
+	
+	    <section class="section-discover" id="section-discover">
+	    	<div class="parent">
+	    	    <div class="card card_--p1">
+	    		    <div class="card-side card-side-front_--p1">
+	    			Discover
+	    			<h1 class="parent-paragraph">Discover all the beauty of the mountains, RIGHT HERE! The beauty of mother nature will shock you and make you fall in love. Mountains rise high above the ground, above everything else.</h1>
+	    		    </div>
+	    		    <div class="card-side card-side-back_--p1">
+	    		    The Mountains
+	    		    <button class="button" onclick="window.location.href='http://mountain.org/'">Discover</button>
+	    		    </div>
+	    	    </div>
+	    	    <div class="card card_--p2">
+	    		    <div class="card-side card-side-front_--p2">
+	    			Book A Trip
+	    			<h1 class="parent-paragraph">Itching to visit these beautiful mountains, wait NO MORE! Book a trip today to world wonders like the Himalayas and the Rocky Mountains and enjoy yourself in the heavenly view.</h1>
+	    		    </div>
+	    		    <div class="card-side card-side-back_--p2">
+	    		    To the Mountains
+	    		    <button class="button" onclick="window.location.href='#Popup_1'">Book Now</button>
+	    		    </div>    		 
+	    	    </div>
+	    	    <div class="card card_--p3">
+	    		    <div class="card-side card-side-front_--p3">
+	    			Learn More
+	    			<h1 class="parent-paragraph">Want to learn more about the history of these great mountains? Want to take on even more challenging hikes and challenge the highest point? LEARN MORE today and join the mountain family.</h1>
+	    		    </div>
+	    		    <div class="card-side card-side-back_--p3">
+	    		    About the Mountains
+	    		    <button class="button" onclick="window.location.href='https://www.nationalgeographic.com/science/earth/surface-of-the-earth/mountains/'">Learn More</button>
+	    		    </div>
+	    	    </div>
+	    </section>
+
+        <section class="section-credit" id="section-credit">
+        	<div class="children">
+        		<img src="Img/Timeslogo.jpg" alt="Critics 1" class="icon-1">
+        		<p class="paragraph-review-1">"A very simple yet useful website, allowing users to stare at pictures of mountains... and that's it!" -The New York Times</p>
+        		<img src="Img/Postlogo.jpg" alt="Critics 2" class="icon-2">
+        		<p class="paragraph-review-2">"Make you want to climb mountains tirelessly, or stay home!" - The Washington  Post</p>
+        	</div>   	
+        </section>	
+	</main>
+</body>
+</html>
