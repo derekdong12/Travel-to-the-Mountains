@@ -7,20 +7,18 @@
     --color: #55E2E8;
     --default-font-size: 1.6rem;
 }
-
-html {
-	font-size: 62.5%;
-}
-
 *, *::before, *::after {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-
+html{
+	width: 100%;
+}
 body {
 	background-color: var(--color-primary);
 	margin: 0;
+	width: 100%;
 }
 
 .overlay {
@@ -246,7 +244,7 @@ ul li a {
 
 .row {
     position: relative;
-    height: 100vh;
+    height: 125vh;
     background-image: linear-gradient(
 		to right bottom,
 		rgba(11, 136, 212, 0.4) ,
@@ -255,7 +253,7 @@ ul li a {
 	background-size: cover;
 	background-position: top;
 	overflow: hidden;
-	width: 200rem;
+	width: 100%;
 }
 
 .paragraph-primary-main {
@@ -292,21 +290,30 @@ ul li a {
 	outline-offset: 2rem;
 }
 
-.composition_--p1 {
-	top: 33rem;
-	left: 110rem;
+/*.composition_--p1 {
+    transform: translate(350%,150%);
 }
 
 .composition_--p2 {
-	top: 42rem;
-	left: 88rem;
+    transform: translate(275%,200%);
 }
 
 .composition_--p3 {
-    top: 42rem;
-    left: 130rem;
+    transform: translate(425%, 200%);
 }
-
+*/
+.composition_--p1 {
+	top: 35rem;
+	left: 100rem;
+}
+.composition_--p2 {
+	top: 47rem;
+	left: 83rem;
+}
+.composition_--p3 {
+	top: 47rem;
+	left: 120rem;
+}
 .composition_photo:hover {
 	transform: scale(1.5) translate(-.5rem);
 	z-index: 10;
@@ -316,7 +323,7 @@ ul li a {
 
 .parent {
     position: relative;
-    height: 100vh;
+    height: 125vh;
 	background-position: top;
 	display: flex;
     flex-flow: row nowrap;
@@ -327,7 +334,7 @@ ul li a {
 		rgba(11, 136, 212, 0.4) ,
 		rgba(11, 113, 175, 0.4)) ,
 	url(Img/Mountain18.jpg);
-	width: 200rem;
+	width: 100%;
 }
 
 .parent-paragraph {
@@ -337,16 +344,12 @@ ul li a {
 	padding: 3rem;
 }
 
-.child {
-  width: 40%;
-  height: 40%;
-}
-
 .card_--p1 {
 	position: relative;
 	perspective: 150rem;
 	left: 20rem;
 	top: 20rem;
+/*	width: 50%;*/
 }
 
 .card_--p2 {
@@ -354,6 +357,7 @@ ul li a {
 	perspective: 150rem;
 	left: 80rem;
 	top: 20rem;
+/*	width: 50%;*/
 }
 
 .card_--p3 {
@@ -361,6 +365,7 @@ ul li a {
 	perspective: 150rem;
 	left: 140rem;
 	top: 20rem;
+/*	width: 50%;*/
 }
 
 .card-side {
@@ -489,7 +494,7 @@ ul li a {
 
 .children {
     position: relative;
-    height: 100vh;
+    height: 125vh;
 	background-position: top;
 	display: flex;
     flex-flow: row nowrap;
@@ -500,7 +505,7 @@ ul li a {
 		rgba(11, 136, 212, 0.4) ,
 		rgba(11, 113, 175, 0.4)) ,
 	url(Img/Mountain21.jpg);
-	width: 200rem;
+	width: 100%;
 }
 
 .icon-1 {
@@ -548,9 +553,15 @@ ul li a {
 	}
 	100% {
 		opacity: 1;
-		transform: translate(5);
+		transform: translate(30%);
 	}
 }
 body{
 	overflow-x: hidden;
+}
+.parent{
+	flex-direction: column;
+}
+html {
+	font-size: 62.5%;
 }
