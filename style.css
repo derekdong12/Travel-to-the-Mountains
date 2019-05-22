@@ -80,9 +80,10 @@ ul li a {
 }
 
 .logo-box {
-	position: absolute;
+	position: fixed;
 	top: 2rem;
 	left: 2rem;
+	z-index:90;
 }
 
 .heading-primary-main {
@@ -257,30 +258,30 @@ ul li a {
 }
 
 .paragraph-primary-main {
-	color: #FF00FF;
+	color:white;
 	font-size: 4rem;
 	font-weight: 100;
 	font-family: 'Gloria Hallelujah', cursive;
 	letter-spacing: 2rem;
-	margin-bottom: 3rem;
-	position: absolute;
+	margin-bottom:2.5%;
     left: 8%;
+    width:70%;
+    margin-left:5%;
+    margin-top:1%;
 }
 
 .paragraph {
-    color: #F0FFFF;
+    color:#F0FFFF;
 	font-size: 1.8rem;
 	font-weight: 100;
 	font-family: 'Laila', serif;
-	margin-bottom: 3rem;
-	position: absolute;
-    top: 40%;
-    left: 15%;
-    right: 70%;
+	width:70%;
+	margin-left:5%;
 }
 
 .composition {
-	position: relative;
+	display:flex;
+	justify-content:space-around;
 }
 
 .composition_photo {
@@ -303,16 +304,18 @@ ul li a {
 }
 */
 .composition_--p1 {
-	top: 35rem;
-	left: 100rem;
+	margin-top:7%;
+	left:10%;
+	transition:all .25s ease-in-out;
 }
 .composition_--p2 {
-	top: 47rem;
-	left: 83rem;
+	margin-top:7%;
+	transition:all .25s ease-in-out;
 }
 .composition_--p3 {
-	top: 47rem;
-	left: 120rem;
+	margin-top:7%;
+	right:10%;
+	transition:all .25s ease-in-out;
 }
 .composition_photo:hover {
 	transform: scale(1.5) translate(-.5rem);
@@ -322,11 +325,9 @@ ul li a {
 }
 
 .parent {
-    position: relative;
     height: 125vh;
 	background-position: top;
 	display: flex;
-    flex-flow: row nowrap;
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(
@@ -345,27 +346,30 @@ ul li a {
 }
 
 .card_--p1 {
-	position: relative;
+	position:relative;
 	perspective: 150rem;
-	left: 20rem;
-	top: 20rem;
 /*	width: 50%;*/
+	transition: all .7s ease-in-out;
+	top:15vh;
+	left:5%;
 }
 
 .card_--p2 {
-	position: relative;
+	position:relative;
 	perspective: 150rem;
-	left: 80rem;
-	top: 20rem;
 /*	width: 50%;*/
+	transition: all .7s ease-in-out;
+	top:15vh;
+	left:37.5%;
 }
 
 .card_--p3 {
-	position: relative;
+	position:relative;
 	perspective: 150rem;
-	left: 140rem;
-	top: 20rem;
 /*	width: 50%;*/
+	transition: all .7s ease-in-out;
+	top:15vh;
+	right:-70%;
 }
 
 .card-side {
@@ -376,6 +380,7 @@ ul li a {
 	height: 60rem;
 	backface-visibility: hidden;
 	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.9);
+	transition: all .7s ease-in-out;
 }
 
 .card-side-front_--p1 {
@@ -383,7 +388,7 @@ ul li a {
     url(Img/Mountain8.jpg);
     background-position: bottom;
 	z-index: 1;
-	transition: .7s;
+	transition: all .7s ease-in-out;
 	font-size: 5rem;
 	color: purple;
 	text-shadow: .4rem .4rem .6rem white;
@@ -394,10 +399,11 @@ ul li a {
     url(Img/Mountain9.jpg);
     background-position: bottom;
 	z-index: 0;
-	transition: .7s;
+	transition: all .7s ease-in-out;
 	font-size: 4rem;
 	color: black;
 	text-shadow: .4rem .4rem .6rem brown;
+	transform:rotateY(180deg);
 }
 
 .card:hover .card-side-front_--p1 {
@@ -413,7 +419,7 @@ ul li a {
     url(Img/Mountain12.jpg);
     background-position: right;
 	z-index: 1;
-	transition: .7s;
+	transition: all .7s ease-in-out;
 	font-size: 5rem;
 	color: gold;
 	text-shadow: .4rem .4rem .6rem green;
@@ -424,10 +430,11 @@ ul li a {
     url(Img/Mountain14.jpg);
     background-position: bottom;
 	z-index: 0;
-	transition: .7s;
+	transition: all .7s ease-in-out;
 	font-size: 4rem;
 	color: green;
 	text-shadow: .4rem .4rem .6rem orange;
+	transform:rotateY(180deg);
 }
 
 .card:hover .card-side-front_--p2 {
@@ -443,10 +450,11 @@ ul li a {
     url(Img/Mountain12.jpg);
     background-position: bottom;
 	z-index: 1;
-	transition: .7s;
+	transition: all .7s ease-in-out;
 	font-size: 5rem;
 	color: blue;
 	text-shadow: .4rem .4rem .6rem red;
+	transition:all 1s;
 }
 
 .card-side-back_--p3 {
@@ -454,7 +462,8 @@ ul li a {
     url(Img/Mountain15.jpg);
     background-position: bottom;
 	z-index: 0;
-	transition: .7s;
+	transform: rotateY(180deg);
+	transition: all .7s ease-in-out;
 	font-size: 3.5rem;
 	color: red;
 	text-shadow: .4rem .4rem .6rem black;
@@ -466,6 +475,7 @@ ul li a {
 
 .card:hover .card-side-back_--p3 {
 	transform: rotateY(0deg);
+
 }
 
 .button {
@@ -492,49 +502,63 @@ ul li a {
   transform: translateY(.4rem);
 }
 
+.review-container-1{
+	display:flex;
+	flex-direction:column;
+	width:40%;
+	
+}
+
+.review-container-2{
+	display:flex;
+	flex-direction:column;
+	width:40%;
+	
+}
+
 .children {
     position: relative;
     height: 125vh;
 	background-position: top;
 	display: flex;
-    flex-flow: row nowrap;
+	justify-content:space-around;
 	background-size: cover;
 	background-position: top;
 	background-image: linear-gradient(
 		to right bottom,
 		rgba(11, 136, 212, 0.4) ,
 		rgba(11, 113, 175, 0.4)) ,
-	url(Img/Mountain21.jpg);
+		url(Img/Mountain21.jpg);
 	width: 100%;
+
 }
 
 .icon-1 {
 	border-radius: 50%;
     height: 10rem; 
     width: 10rem;
-    margin: 10rem;
+    margin-bottom:5%;
+    margin-top:15%;
 }
 
 .paragraph-review-1 {
 	font-size: 3.5rem;
-	margin-right: 10rem;
-	margin-top: 12.5rem;
-	color: #f44141;
+	color: black;
+	font-family:arial;
 }
 
 .icon-2 {
 	border-radius: 50%;
 	height: 10rem;
 	width: 10rem;
-	margin-top: 60rem;
-	margin-right: -110rem;
+	margin-bottom:5%;
+	margin-top:75%;
 }
 
 .paragraph-review-2 {
 	font-size: 3.5rem;
-	margin-right: 50rem;
-	margin-top: 60rem;
-	color: #61f441;
+	color:white;
+	font-family:arial;
 }
 
 @keyframes moveInLeft {
@@ -565,3 +589,75 @@ body{
 html {
 	font-size: 62.5%;
 }
+
+@media only screen and (max-width:1100px){
+	.heading-primary-main{
+		animation-duration:0s;
+		font-size:2rem;
+		width:80%;
+		line-height:250%;
+		margin-left:-5%;
+	}
+
+	.paragraph-primary-main{
+		font-size:1.75rem;
+		width:80%;
+		text-align:justify;
+	}
+
+	.paragraph{
+		font-size:1.25rem;
+		width:70%;
+	}
+
+	.composition{
+		margin-top:30%;
+	}
+
+	.composition_photo:hover {
+		transform: scale(1.25);
+		z-index: 10;
+		box-shadow: 0 2.5rem 4rem rgba(0,0,0,.6);
+		outline:.5rem solid #00FFFF;
+	}
+
+	.card_--p3{
+		display:none;
+	}
+
+	.card_--p2{
+		transform:scale(.75);
+		left:30%;
+		right:25%;
+		width:50%;
+	}
+
+	.card_--p1{
+		display:none;
+	}	
+}
+
+
+@media only screen and (max-width:1000px){
+	.card_--p2{
+		left:27.5%;
+	}
+}
+
+@media only screen and (max-width:900px){
+	.icon-2{
+		margin-top:15%;
+	}
+
+	.card_--p2{
+		left:25%;
+	}
+}
+
+@media only screen and (max-width:800px){
+	.card_--p2{
+		left:15%;
+	}
+}
+
+
